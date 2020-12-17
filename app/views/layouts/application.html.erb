@@ -10,6 +10,23 @@
   </head>
 
   <body>
+
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">DoKo</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/app/views/tests/index.html">Search</a>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <p>
+        ©︎Doko 2020.
+      </p>
+    </footer>
+
   </body>
 </html>

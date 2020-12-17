@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <style>
+      #maps{ height: 90%; width: 100% }
+    </style>
+  </head>
+  <body>
+  <div id="maps"></div>
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyACyEK1aQs576LqdimZ8_flUkSzaPpvxlk&callback=initMap" async></script>
+  <script>
+    function initMap() {
+      var mapPosition = {lat: 35.662702, lng: 139.699962}; //初期位置
+      var mapArea = document.getElementById('maps');
+      var mapOptions = {
+        center: mapPosition,
+        zoom: 18,
+
+        //オプション
+        styles: [
+
+        //ピン全消し
+         {
+            featureType: 'all',
+            elementType: 'labels',
+            stylers: [
+            {visibility: 'off'},
+            ],
+          },
+
+        //地名のみ表示
+          {
+            featureType: 'administrative',
+            elementType: 'labels',
+            stylers: [
+            {visibility: 'on'},
+            ],
+          },
+        
+        //色合い
+          {
+            featureType: 'all',
+            elementType: 'all',
+            stylers: [
+            {hue: '0'},
+            {saturation : 0},
+            ],
+          },
+        ],
+      };
+      var map = new google.maps.Map(mapArea, mapOptions);
+    }
+  </script>
+  </body>
+</html>
