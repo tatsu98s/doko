@@ -16,6 +16,11 @@
         center: mapPosition,
         zoom: 18,
 
+<<<<<<< Updated upstream
+=======
+        
+
+>>>>>>> Stashed changes
         //オプション
         styles: [
 
@@ -49,7 +54,26 @@
         ],
       };
       var map = new google.maps.Map(mapArea, mapOptions);
+<<<<<<< Updated upstream
     }
+=======
+      
+
+      //marker生成
+      var markers = locations.map(function(location) {
+        return new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      });
+    }
+    //marker座標
+    var locations = [
+        {lat: 35.662702, lng: 139.699962},
+        {lat: 35.662702, lng: 139.699000},
+        {lat: 35.662002, lng: 139.699962}
+    ]
+>>>>>>> Stashed changes
   </script>
   </body>
 </html>
